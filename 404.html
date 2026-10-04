@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redirecting | Rishabh Prajapati</title>
+<meta name="robots" content="noindex">
+<script>
+/* GitHub Pages serves this file for unknown paths. Map clean URLs such as
+   /Portfolio-Test/projects/misa-chatbot onto the hash routes used by the app. */
+(function () {
+  var base = '/Portfolio-Test/';
+  var path = location.pathname;
+  var rest = path.indexOf(base) === 0 ? path.slice(base.length) : path.replace(/^\//, '');
+  rest = rest.replace(/\/+$/, '').replace(/\.html$/, '');
+  var known = ['about', 'skills', 'projects', 'certifications', 'experience', 'contact'];
+  var first = rest.split('/')[0];
+  location.replace(base + (known.indexOf(first) > -1 ? '#/' + rest : ''));
+})();
+</script>
+</head>
+<body style="background:#06070b;color:#eef1f7;font-family:system-ui,sans-serif;padding:40px">
+<p>Redirecting&hellip; <a style="color:#43e0ff" href="/Portfolio-Test/">Go to the portfolio</a>.</p>
+</body>
+</html>
